@@ -50,7 +50,7 @@ function incrementyverseLoop(ms,off=0) {
     game.orbEffectExp += ms/1000 * calcOrbSpeedMult()
   }
   [1,2,3,4,5].forEach(num => {fuep(num,1)})
-  game.bigBrainOrd=game.bigBrainOrd.add(calcIncrementyMult().times(ms/500))
+  game.bigBrainOrd=game.bigBrainOrd.add(calcIncrementyMult().times(ms/1000))
   game.incrementy=game.incrementy.add(getIncrementyRate(ms))
   game.multifolds=game.multifolds.max(EN(calcIncrementyMult()).logBase(3)).floor()
   game.sing.m = Math.floor(game.multifolds)
@@ -232,7 +232,7 @@ function incrementyverseButtons() {
   if (get("Tab7").style.display=="block"&&game.csubTab==5) {
   get("singEffect").innerHTML =
     "Raising the Ordinal Cap to " +
-    displayHugeOrd(EN(3).pow(getSingLevel()).times(BHO/3e270))
+    displayHugeOrd(EN(3).pow(getSingLevel()).times(BHO/4e270))
   }
   get("singFBtext").innerHTML = `You are currently getting ${beautify(getIncrementyRate(1000))} incrementy per second`
   get("blackHoleCircle").r.baseVal.value = 100;
