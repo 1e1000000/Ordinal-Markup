@@ -50,7 +50,7 @@ function incrementyverseLoop(ms,off=0) {
     game.orbEffectExp += ms/1000 * calcOrbSpeedMult()
   }
   [1,2,3,4,5].forEach(num => {fuep(num,1)})
-  game.bigBrainOrd=game.bigBrainOrd.add(calcIncrementyMult().times(ms/1000))
+  game.bigBrainOrd=game.bigBrainOrd.add(calcIncrementyMult().times(ms/500))
   game.incrementy=game.incrementy.add(getIncrementyRate(ms))
   game.multifolds=game.multifolds.max(EN(calcIncrementyMult()).logBase(3)).floor()
   game.sing.m = Math.floor(game.multifolds)
